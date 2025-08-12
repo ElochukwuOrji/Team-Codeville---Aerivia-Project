@@ -1,0 +1,422 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #F9F6F5;
+    position: relative;
+    width: 1440px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+.header {
+    position: absolute;
+    height: 115px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #87E6F1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 177px;
+    height: 251px;
+    background: url('images/Aerivia-logo.png') no-repeat center;
+    background-size: contain;
+    margin-top: -5px;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #1A1A1A;
+    background-position-x: -50px;
+}
+
+.nav-links {
+    display: flex;
+    background: #F3EDEA;
+    border-radius: 80px;
+    padding: 1px 20px;
+    gap: 13px;
+}
+
+.nav-link {
+    padding: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 20px;
+    background: #162D30;
+    border: 1px solid #404040;
+    border-radius: 100px;
+    color: #F3EDEA;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    text-decoration: none;
+}
+
+/* Hero Image Styles */
+.booking-hero-image {
+    position: absolute;
+    height: 675px;
+    left: 0;
+    right: 0;
+    top: 115px; 
+    background: url('images/booking-page-image.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+}
+
+/* Search Bar */
+.search-bar {
+    position: absolute;
+    width: 1291px;
+    height: 80px;
+    left: 72px;
+    top: 827px;
+    background: #F3EDEA;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.search-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #1A1A1A;
+}
+
+.switch-icon {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #6FE1EE;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 164px;
+    height: 50px;
+    background: #6FE1EE;
+    border-radius: 10px;
+    color: #FDFBFB;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Flight Cards */
+.flight-container {
+    position: absolute;
+    width: 100%;
+    top: 937px;
+}
+
+.flight-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 38px;
+    height: 173px;
+    background: #E2F9FC;
+    margin-bottom: 20px;
+}
+
+.airline-info {
+    display: flex;
+    align-items: center;
+    width: 230px;
+    height: 110px;
+}
+
+.airline-logo {
+    width: 50px;
+    height: 50px;
+    background: #D9D9D9;
+    border-radius: 50px;
+    margin-right: 20px;
+}
+
+.airline-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.airline-name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.luggage-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.luggage-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    color: #4B5563;
+}
+
+.flight-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 274px;
+}
+
+.time {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.date {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.airport {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #000000;
+    margin-top: 10px;
+}
+
+.flight-duration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 192px;
+}
+
+.duration {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.flight-path {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.dot {
+    width: 11px;
+    height: 11px;
+    background: #4B5563;
+    border-radius: 50%;
+}
+
+.line {
+    width: 150px;
+    height: 0px;
+    border: 1px solid #4B5563;
+}
+
+.flight-type {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.flight-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 164px;
+    height: 120px;
+    background: #9FEBF4;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #387177;
+}
+
+.book-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 124px;
+    height: 50px;
+    background: #254B4F;
+    border-radius: 10px;
+    color: #FDFBFB;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    position: absolute;
+    width: 100%;
+    height: 577.81px;
+    top: 3736.2px;
+    background: #87E6F1;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 120px;
+}
+
+.footer-logo {
+    width: 485.39px;
+    height: 485.39px;
+    background: url('images/Aerivia-logo.png') no-repeat;
+    background-size: contain;
+}
+
+.footer-brand {
+    margin-top: 20px;
+}
+
+.brand-name {
+    font-weight: 500;
+    font-size: 52px;
+    line-height: 78px;
+    color: #1A1A1A;
+}
+
+.brand-tagline {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 42px;
+    color: #1A1A1A;
+    margin-top: 10px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.footer-link {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 42px;
+    color: #1A1A1A;
+    text-decoration: none;
+}
+
+.footer-social {
+    display: flex;
+    gap: 26px;
+    margin-top: 40px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background: #1A1A1A;
+    border-radius: 50%;
+}
+
+.footer-copyright {
+    position: absolute;
+    bottom: 36.68px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 592px;
+    height: 57.48px;
+    background: #F3EDEA;
+    border-radius: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.copyright-symbol {
+    width: 25.65px;
+    height: 25.65px;
+    border: 2px solid #1A1A1A;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright-text {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 42px;
+    color: #1A1A1A;
+}

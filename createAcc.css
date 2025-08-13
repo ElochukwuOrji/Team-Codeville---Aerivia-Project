@@ -1,0 +1,303 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+/* Main container */
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: url('images/login-background.jpg') center/cover no-repeat, #4ECDC4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background logo section */
+.background-logo {
+    position: absolute;
+    left: 70px;
+    top: 70px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo-placeholder {
+    width: 90px;
+    height: 90px;
+    background: url('images/Aerivia-logo.png') center/contain no-repeat;
+    background-color: transparent;
+    border-radius: 15px;
+    position: relative;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-placeholder::after {
+    display: none;
+}
+
+.brand-name {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 50px;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+}
+
+/* Login form container */
+.login-container {
+    position: relative;
+    width: 780px;
+    max-width: 90vw;
+    background: #FFFFFF;
+    border-radius: 30px;
+    padding: 80px 60px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Back arrow - hidden in this design */
+.back-arrow {
+    display: none;
+}
+
+/* Welcome title */
+.welcome-title {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    color: #2D2D2D;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+/* Form fields */
+.form-field {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.field-label {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #2D2D2D;
+    min-width: 140px;
+    text-align: left;
+}
+
+.input-container {
+    flex: 1;
+    max-width: 400px;
+}
+
+.form-input {
+    width: 100%;
+    height: 55px;
+    background: #FFFFFF;
+    border: 2px solid #E0E0E0;
+    border-radius: 15px;
+    padding: 15px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2D2D2D;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input::placeholder {
+    color: #A0A0A0;
+    font-weight: 400;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #4ECDC4;
+    box-shadow: 0 0 0 4px rgba(78, 205, 196, 0.1);
+}
+
+/* Buttons */
+.continue-btn {
+    width: 100%;
+    max-width: 600px;
+    height: 60px;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    text-transform: none;
+}
+
+.continue-btn {
+    background: linear-gradient(135deg, #1E3A3D 0%, #162D30 100%);
+}
+
+.continue-btn:hover {
+    background: linear-gradient(135deg, #243F42 0%, #1A3336 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(30, 58, 61, 0.4);
+}
+
+
+/* Background texture */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(0, 0, 0, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .login-container {
+        width: 100%;
+        max-width: 650px;
+        padding: 60px 40px;
+    }
+    
+    .background-logo {
+        left: 40px;
+        top: 40px;
+    }
+    
+    .brand-name {
+        font-size: 36px;
+        line-height: 45px;
+    }
+    
+    .welcome-title {
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 50px;
+    }
+    
+    .form-field {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        max-width: 500px;
+    }
+    
+    .field-label {
+        min-width: auto;
+        font-size: 16px;
+    }
+    
+    .input-container {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .login-btn,
+    .create-account-btn {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        padding: 50px 30px;
+        margin: 20px;
+        border-radius: 25px;
+    }
+    
+    .background-logo {
+        left: 30px;
+        top: 30px;
+    }
+    
+    .logo-placeholder {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .brand-name {
+        font-size: 28px;
+        line-height: 35px;
+    }
+    
+    .welcome-title {
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 40px;
+    }
+    
+    .form-input,
+    .login-btn,
+    .create-account-btn {
+        font-size: 16px;
+        height: 50px;
+    }
+    
+    .field-label {
+        font-size: 15px;
+    }
+    
+    .decorative-elements {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 40px 25px;
+    }
+    
+    .welcome-title {
+        font-size: 28px;
+        line-height: 35px;
+    }
+    
+    .form-field {
+        margin-bottom: 25px;
+    }
+}

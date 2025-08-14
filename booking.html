@@ -31,21 +31,57 @@
     <!-- Search Bar -->
     <div class="search-bar">
         <div class="search-item">
-            <div class="search-text">From LONDON</div>
+            <div class="search-text">
+               <label for="passengers">From</label>
+                <select id="passengers" required>
+                    <option value="" selected disabled>From destination...</option>
+                    <option value="1">BANGKOK</option>
+                    <option value="2">CAPE TOWN</option>
+                    <option value="3">DUBAI</option>
+                    <option value="4">LONDON</option>
+                    <option value="5">NEW YORK</option>
+                    <option value="6">PARIS</option>
+                    <option value="7">ROME</option>
+                    <option value="8">SYDNEY</option>
+                    <option value="9">TOKYO</option>
+                    <option value="10">TORONTO</option>
+                </select>
+            </div>    
         </div>
         
         <div class="search-item">
             <div class="switch-icon">
                 <!-- Switch icon would go here -->
             </div>
-            <div class="search-text">To CANADA</div>
+        </div>
+
+        <div class="search-item">
+            <div class="search-text">
+               <label for="passengers">To</label>
+                <select id="passengers" required>
+                    <option value="" selected disabled>To destination...</option>
+                    <option value="1">BANGKOK</option>
+                    <option value="2">CAPE TOWN</option>
+                    <option value="3">DUBAI</option>
+                    <option value="4">LONDON</option>
+                    <option value="5">NEW YORK</option>
+                    <option value="6">PARIS</option>
+                    <option value="7">ROME</option>
+                    <option value="8">SYDNEY</option>
+                    <option value="9">TOKYO</option>
+                    <option value="10">TORONTO</option>
+                </select>
+            </div>    
         </div>
         
         <div class="search-item">
-            <div class="search-text">Departure 06-08-2025</div>
-        </div>
-        
-        <button class="search-button">Search</button>
+            <div class="date-icon">
+            <label class="search-text" for="departureDate">Departure Date</label>
+            <input type="date" id="departureDate" required>
+            </div>
+        </div>  
+
+        <button class="search-button">SEARCH FLIGHT</button>
     </div>
     
     <!-- Flight Cards -->
@@ -185,5 +221,19 @@
             <div class="copyright-text">2025 Aerivia. All rights reserved.</div>
         </div>
     </footer>
+
+    <script>
+        // Set minimum date for date inputs to today
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('departureDate').min = today;
+            document.getElementById('returnDate').min = today;
+            
+            // Update return date minimum when departure date changes
+            document.getElementById('departureDate').addEventListener('change', function() {
+                document.getElementById('returnDate').min = this.value;
+            });
+        });
+    </script>
 </body>
 </html>

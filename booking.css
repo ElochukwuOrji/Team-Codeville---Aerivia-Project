@@ -96,65 +96,118 @@ body {
     z-index: 1;
 }
 
-/* Search Bar */
+/* Search Bar - Improved Positioning and Sizing */
 .search-bar {
     position: absolute;
-    width: calc(100% - 144px);
-    max-width: 1291px;
+    width: calc(100% - 80px);
+    max-width: 1200px;
     height: auto;
-    left: 72px;
-    top: 827px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 750px;
     background: #F3EDEA;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+    border-radius: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    flex-wrap: wrap;
-    gap: 10px;
+    padding: 25px 30px;
+    gap: 20px;
+    z-index: 10;
 }
 
 .search-item {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
+    gap: 8px;
     flex: 1;
-    min-width: 150px;
+    min-width: 180px;
+}
+
+.search-item label {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1A1A1A;
+    margin-bottom: 5px;
+}
+
+.search-item select,
+.search-item input[type="date"] {
+    padding: 12px 15px;
+    font-size: 16px;
+    font-weight: 400;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #1A1A1A;
+    outline: none;
+    transition: all 0.3s ease;
+    min-height: 48px;
+}
+
+.search-item select:focus,
+.search-item input[type="date"]:focus {
+    border-color: #6FE1EE;
+    box-shadow: 0 0 0 3px rgba(111, 225, 238, 0.1);
 }
 
 .search-text {
     font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 16px;
+    line-height: 24px;
     color: #1A1A1A;
 }
 
-.switch-icon {
+/* .switch-icon {
     width: 48px;
     height: 48px;
-    border: 1px solid #6FE1EE;
-    border-radius: 50px;
+    border: 2px solid #6FE1EE;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-end;
+    margin-bottom: 8px;
+    flex-shrink: 0;
 }
+
+.switch-icon:hover {
+    background: #6FE1EE;
+    transform: rotate(180deg);
+} */
 
 .search-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    width: 164px;
-    height: 50px;
+    padding: 12px 24px;
+    min-width: 180px;
+    height: 52px;
     background: #6FE1EE;
-    border-radius: 10px;
+    border-radius: 12px;
     color: #FDFBFB;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
     border: none;
     cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.search-button:hover {
+    background: #5AD4E1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(111, 225, 238, 0.3);
+}
+
+.search-button:active {
+    transform: translateY(0);
 }
 
 /* Flight Cards */
@@ -443,7 +496,7 @@ body {
     color: #1A1A1A;
 }
 
-/* Mobile Styles */
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
     body {
         width: 100%;
@@ -484,31 +537,52 @@ body {
 
     .search-bar {
         position: relative;
-        width: calc(100% - 40px);
-        left: 20px;
-        top: 20px;
+        width: calc(100% - 20px);
+        left: 50%;
+        transform: translateX(-50%);
+        top: 30px;
         flex-direction: column;
         align-items: stretch;
-        height: auto;
         padding: 20px;
+        gap: 20px;
+        border-radius: 12px;
+        margin: 20px 0;
     }
 
     .search-item {
         width: 100%;
-        margin-bottom: 10px;
+        min-width: unset;
+        margin-bottom: 0;
     }
 
-    .search-text {
+    .search-item label {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .search-item select,
+    .search-item input[type="date"] {
+        width: 100%;
+        padding: 14px 16px;
         font-size: 16px;
-        padding: 12px;
-        background: white;
-        border-radius: 8px;
-        border: 1px solid #ddd;
+        min-height: 50px;
+        border-radius: 10px;
+    }
+
+    .switch-icon {
+        align-self: center;
+        margin: 10px 0;
+        width: 44px;
+        height: 44px;
     }
 
     .search-button {
         width: 100%;
+        min-width: unset;
+        height: 54px;
+        font-size: 16px;
         margin-top: 10px;
+        border-radius: 10px;
     }
 
     .flight-container {
@@ -638,20 +712,33 @@ body {
     }
 
     .search-bar {
-        left: 30px;
         width: calc(100% - 60px);
+        padding: 25px;
+        gap: 15px;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
     }
 
     .search-item {
-        min-width: 200px;
+        min-width: 160px;
+        flex: 1 1 200px;
+    }
+
+    .search-item select,
+    .search-item input[type="date"] {
+        min-height: 46px;
+        padding: 10px 12px;
     }
 
     .search-button {
-        width: 100%;
+        flex: 1 1 100%;
+        max-width: 200px;
         margin-top: 15px;
+        height: 50px;
+    }
+
+    .switch-icon {
+        margin-top: 20px;
     }
 
     .flight-container {
@@ -702,5 +789,30 @@ body {
     .footer-link {
         font-size: 20px;
         line-height: 30px;
+    }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1200px) {
+    .search-bar {
+        max-width: 1300px;
+        padding: 30px 40px;
+        gap: 25px;
+    }
+
+    .search-item {
+        min-width: 200px;
+    }
+
+    .search-item select,
+    .search-item input[type="date"] {
+        padding: 14px 18px;
+        font-size: 16px;
+    }
+
+    .search-button {
+        min-width: 200px;
+        height: 54px;
+        font-size: 18px;
     }
 }

@@ -1,0 +1,174 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: auto;
+    background-color:  #F9F6F5;
+}
+
+.landing-container {
+    height: 800px;
+    width: 1200px;
+    background: url('images/Hero.jpg') center center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 30px;
+    margin-left: 35px;
+    margin-top: 200px;
+    background-color: #87E6F1;
+    overflow: hidden;
+}
+
+.nav-btn {
+    display: flex;
+    gap: 32px;
+    border: 2px solid #254B4F;   /* Add border */
+    border-radius: 18px;          /* Optional: rounded corners */
+    padding: 10px;           /* Space inside the border */
+    background:#162D30;
+    width: 60px;
+    height: 10px;
+    color: white;
+    align-items: center;
+    padding: 10px 24px; /* Space inside the border */
+    text-decoration: none;
+    position: fixed;
+    left: 1100px;
+    top: 20px;
+}
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif; /* Already set, but you can change it */
+    font-size: 18px;    /* Change size as needed */
+    font-weight: 500;   /* Make it bolder if you want */
+    letter-spacing: 0px; /* Optional: add spacing between letters */
+}
+
+.landing-nav {
+    display: flex;
+    gap: 33px; /* Adjust the value for more or less space */
+    padding-top: 11px;
+    padding-right: 30px;
+    border-radius: 80px;          /* Optional: rounded corners */
+    width: 420px;
+    height: 35px;
+    align-items: center;
+    padding: 10px 24px; /* Space inside the border */
+    background-color: #F3EDEA;
+    position: fixed;
+    left: 400px;
+    top: 10px;
+    text-decoration: none;
+    
+}
+
+.landing-header {
+    background-color: #87E6F1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;    /* Cover the full viewport width */
+    height: 80px;
+    z-index: 10;
+    border-top-left-radius: 30px; /* Optional: rounded corners */
+    border-top-right-radius: 30px; /* Optional: rounded corners */
+}
+
+.logo-title {
+    font-family: 'Poppins', sans-serif; /* Change to another font if you want */
+    font-size: 20px;    /* Adjust size */
+    font-weight: 700;   /* Make it bold */
+    letter-spacing: 0px; /* Optional: spacing between letters */
+    position: fixed;
+    top: 50px;
+    left: 70px;
+}
+
+.logo-img {
+    width: 177px;
+    height: 251px;
+    background: url('images/Aerivia-logo.png') center/contain no-repeat;
+    position: fixed;
+    top: -80px;
+    left: 20px;
+}
+
+.hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;      /* Adjust size as needed */
+    font-weight: 700;     /* Bold */
+    letter-spacing: 0px;  /* Optional */
+    margin-left: 80px;
+    margin-bottom: 0px;
+    height: 200px;
+    width: 404px;
+    color: #1A1A1A;
+}
+
+.hero-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;      /* Adjust size as needed */
+    font-weight: 500;     /* Regular weight */
+    letter-spacing: 0px;  /* Optional */
+    margin-left: 80px;
+    margin-top: 150px;
+    color: #1A1A1A;
+    line-height: 100%;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 32px;
+    border: 2px solid #254B4F;   /* Add border */
+    border-radius: 18px;          /* Optional: rounded corners */
+    padding: 10px;           /* Space inside the border */
+    background:#162D30;
+    width: 90px;
+    height: 10px;
+    color: white;
+    align-items: center;
+    padding: 10px 24px; /* Space inside the border */
+    text-decoration: none;
+    margin-left: 90px;
+    margin-top: 80px;  
+}
+    
+.where-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;      /* Adjust size as needed */
+    font-weight: 500;     /* Bold */
+    letter-spacing: 0px;  /* Optional */
+    margin-left:400px;
+    margin-top: 50px;
+    color: #1A1A1A
+
+}
+
+
+
+.where-nav {
+    display: flex;
+    gap: 370px; /* Adjust the value for more or less space */
+    padding-top: 11px;
+    padding-right: 30px;
+    border-radius: 80px;          /* Optional: rounded corners */
+    width: 420px;
+    height: 35px;
+    margin-left:140px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500px;
+    font-size: 20px;
+    border-radius: 1000px;          /* Optional: rounded corners */
+  
+
+}
+
+.drop-down {
+    background-color:#F3EDEA;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 50px;
+}

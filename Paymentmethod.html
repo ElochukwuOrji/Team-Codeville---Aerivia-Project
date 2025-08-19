@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="paymentmethod.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+    <title>Aerivia - Bookings</title>
+</head>
+<body>
+
+    <div class="payment-container" id="payment-box">
+    <h2>Payment Method</h2>
+
+    <div class="tabs">
+      <div class="tab active" onclick="showTab('card')"><img src="images/solar_card-2-outline.svg" class="itab" alt="solarcard">Credit or Debit Card</div>
+      <div class="tab" onclick="showTab('bank')"><img src="images/hugeicons_bank.svg" alt="" class="itab"> Bank Transfer</div>
+    </div>
+
+    <!-- Card Form -->
+    <div id="card-form" >
+      <label>Cardholder’s Name</label>
+      <input  type="text" id="cardName" value="Augusta Chidiebere" placeholder="Enter Card Name"  onfocus="this.value=''" >
+      <label>Card Number</label>
+      <div class="card-row ">
+       <img src="images/logos_mastercard.svg" alt="mastercard">
+        <input type="text" id="cardNumber" value="8970 6754 4321 9807" placeholder="Enter 16-digit" maxlength="16"  onfocus="this.value=''">
+      </div>
+
+      <div class="flex-row">
+        <div>
+          <label>Expiry</label>
+          <input type="text" id="expiry" value="03 / 25" placeholder="MM/YY" maxlength="5"  onfocus="this.value=''">
+        </div>
+        <div>
+          <label>CVC</label>
+          <input type="text" id="cvc" value="654" placeholder="XXX" maxlength="3"  onfocus="this.value=''">
+        </div>
+      </div>
+
+      <button class="pay-btn" onclick="validateCard()" >Pay Now</button>
+    </div>
+
+    <!-- Bank Transfer Form -->
+    <div id="bank-form" style="display:none;">
+      <label>Account Name</label>
+      <input type="text" id="accName" placeholder="Enter Account Name">
+
+      <label>Account Number</label>
+      <input type="text" id="accNumber" placeholder="Enter 10-digit Account Number" maxlength="10">
+
+      <label>Bank Name</label>
+      <input type="text" id="bankName" placeholder="Enter Bank Name">
+
+      <button class="pay-btn" onclick="validateBank()">Transfer Now</button>
+    </div>
+
+  <!-- Loading Spinner -->
+  <div class="loading" id="loadingSpinner">
+    <div class="spinner"></div>
+  </div>
+
+
+<!-- Confirmation Modal -->
+  <div class="modal" id="confirmationModal">
+    <div class="modal-content">
+      <h3>✅ Payment Successful!</h3>
+      <p>Your transaction has been processed.</p>
+      <div class="modal-buttons">
+        <button class="view-btn" onclick="alert('N25,000 has been paid')">View Details</button>
+        <button class="close-btn" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+<script src="paymentmethod.js"></script>
+</html>

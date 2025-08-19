@@ -16,9 +16,9 @@
         </div>
         
         <nav class="nav-links">
-            <a href="#" class="nav-link">Home</a>
+            <a href="landing.html" class="nav-link">Home</a>
             <a href="#" class="nav-link">Destination</a>
-            <a href="#" class="nav-link">Bookings</a>
+            <a href="booking.html" class="nav-link">Bookings</a>
         </nav>
         
         <a href="landing.html" class="nav-button">Log out</a>
@@ -31,12 +31,12 @@
     <div class="search-bar">
         <div class="search-item">
             <div class="search-text">
-               <label for="passengers">From</label>
-                <select id="passengers" required>
+               <label for="from-destination">From</label>
+                <select id="from-destination" required>
                     <option value="" selected disabled>From destination</option>
-                    <option value="1">CANADA</option>
-                    <option value="2">LONDON</option>
-                    <option value="3">FRANCE</option>
+                    <option value="CANADA">CANADA</option>
+                    <option value="LONDON">LONDON</option>
+                    <option value="FRANCE">FRANCE</option>
                 </select>
             </div>    
         </div>
@@ -49,12 +49,12 @@
 
         <div class="search-item">
             <div class="search-text">
-               <label for="passengers">To</label>
-                <select id="passengers" required>
+               <label for="to-destination">To</label>
+                <select id="to-destination" required>
                     <option value="" selected disabled>To destination</option>
-                    <option value="1">CANADA</option>
-                    <option value="2">LONDON</option>
-                    <option value="3">FRANCE</option>
+                    <option value="CANADA">CANADA</option>
+                    <option value="LONDON">LONDON</option>
+                    <option value="FRANCE">FRANCE</option>
                 </select>
             </div>    
         </div>
@@ -66,13 +66,13 @@
             </div>
         </div>  
 
-        <button class="search-button">SEARCH FLIGHT</button>
+        <button class="search-button" id="search-flight-btn">SEARCH FLIGHT</button>
     </div>
     
     <!-- Flight Cards -->
     <div class="flight-container">
         <!-- Flight Card 1 for London to Canada -->
-        <div class="flight-card">
+        <div class="flight-card" id="flight-card-1" data-from="LONDON" data-to="CANADA">
             <div class="airline-info">
                 <div class="arik-airline-logo"></div>
                 <div class="airline-text">
@@ -117,12 +117,12 @@
                     <span>₦</span>
                     <span>825,633</span>
                 </div>
-                <button class="book-button">Book</button>
+                <h5> <a href="Paymentmethod.html" class="book-button">Book</a> </h5>
             </div>
         </div>
         
         <!-- Flight Card 2 for London to France-->
-        <div class="flight-card">
+        <div class="flight-card" id="flight-card-2" data-from="LONDON" data-to="FRANCE">
             <div class="airline-info">
                 <div class="airpeace-airline-logo"></div>
                 <div class="airline-text">
@@ -165,12 +165,12 @@
                     <span>₦</span>
                     <span>220,601</span>
                 </div>
-                <button class="book-button">Book</button>
+                <h5> <a href="Paymentmethod.html" class="book-button">Book</a> </h5>
             </div>
         </div>
 
         <!-- Flight Card 3 for Canada to London -->
-        <div class="flight-card">
+        <div class="flight-card" id="flight-card-3" data-from="CANADA" data-to="LONDON">
             <div class="airline-info">
                 <div class="arik-airline-logo"></div>
                 <div class="airline-text">
@@ -215,12 +215,12 @@
                     <span>₦</span>
                     <span>825,633</span>
                 </div>
-                <button class="book-button">Book</button>
+                <h5> <a href="Paymentmethod.html" class="book-button">Book</a> </h5>
             </div>
         </div>
         
         <!-- Flight Card 4 for Canada to France-->
-        <div class="flight-card">
+        <div class="flight-card" id="flight-card-4" data-from="CANADA" data-to="FRANCE">
             <div class="airline-info">
                 <div class="airpeace-airline-logo"></div>
                 <div class="airline-text">
@@ -263,12 +263,12 @@
                     <span>₦</span>
                     <span>800,637</span>
                 </div>
-                <button class="book-button">Book</button>
+                <h5> <a href="Paymentmethod.html" class="book-button">Book</a> </h5>
             </div>
         </div>
 
         <!-- Flight Card 5 for France to Canada -->
-        <div class="flight-card">
+        <div class="flight-card" id="flight-card-5" data-from="FRANCE" data-to="CANADA">
             <div class="airline-info">
                 <div class="arik-airline-logo"></div>
                 <div class="airline-text">
@@ -313,12 +313,12 @@
                     <span>₦</span>
                     <span>800,637</span>
                 </div>
-                <button class="book-button">Book</button>
+                <h5> <a href="Paymentmethod.html" class="book-button">Book</a> </h5>
             </div>
         </div>
         
         <!-- Flight Card 6 for France to London-->
-        <div class="flight-card">
+        <div class="flight-card" id="flight-card-6" data-from="FRANCE" data-to="LONDON">
             <div class="airline-info">
                 <div class="airpeace-airline-logo"></div>
                 <div class="airline-text">
@@ -361,7 +361,7 @@
                     <span>₦</span>
                     <span>220,601</span>
                 </div>
-                <button class="book-button">Book</button>
+                <h5> <a href="Paymentmethod.html" class="book-button">Book</a> </h5>
             </div>
         </div>
     </div>
@@ -408,13 +408,84 @@
         document.addEventListener('DOMContentLoaded', function() {
             const today = new Date().toISOString().split('T')[0];
             document.getElementById('departureDate').min = today;
-            document.getElementById('returnDate').min = today;
             
-            // Update return date minimum when departure date changes
-            document.getElementById('departureDate').addEventListener('change', function() {
-                document.getElementById('returnDate').min = this.value;
+            // Add event listener to search button
+            document.getElementById('search-flight-btn').addEventListener('click', function() {
+                filterFlights();
+            });
+            
+            // Add validation for same origin/destination selection
+            const fromSelect = document.getElementById('from-destination');
+            const toSelect = document.getElementById('to-destination');
+            
+            fromSelect.addEventListener('change', function() {
+                if (this.value === toSelect.value && toSelect.value !== '' && this.value !== '') {
+                    alert('Origin and destination cannot be the same');
+                    this.value = '';
+                }
+            });
+            
+            toSelect.addEventListener('change', function() {
+                if (this.value === fromSelect.value && fromSelect.value !== '' && this.value !== '') {
+                    alert('Origin and destination cannot be the same');
+                    this.value = '';
+                }
             });
         });
+
+        // Function to filter flights based on user selection
+        function filterFlights() {
+            // Get user selections
+            const fromDestination = document.getElementById('from-destination').value;
+            const toDestination = document.getElementById('to-destination').value;
+            const departureDate = document.getElementById('departureDate').value;
+            
+            // Validate inputs
+            if (!fromDestination || !toDestination || !departureDate) {
+                alert('Please select all fields: From, To, and Departure Date');
+                return;
+            }
+            
+            if (fromDestination === toDestination) {
+                alert('Origin and destination cannot be the same');
+                return;
+            }
+            
+            // Format the date for display (e.g., "6 Aug 25")
+            const formattedDate = formatDate(departureDate);
+            
+            // Hide all flight cards initially
+            const allFlightCards = document.querySelectorAll('.flight-card');
+            allFlightCards.forEach(card => {
+                card.style.display = 'none';
+            });
+            
+            // Show only the matching flight card
+            const matchingCard = document.querySelector(`.flight-card[data-from="${fromDestination}"][data-to="${toDestination}"]`);
+            
+            if (matchingCard) {
+                // Update the date in the flight card
+                const dateElements = matchingCard.querySelectorAll('.date');
+                dateElements.forEach(element => {
+                    element.textContent = formattedDate;
+                });
+                
+                // Show the matching flight card
+                matchingCard.style.display = 'flex';
+            } else {
+                alert('No flights found for the selected route');
+            }
+        }
+        
+        // Function to format date as "6 Aug 25"
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const day = date.getDate();
+            const month = date.toLocaleString('default', { month: 'short' });
+            const year = date.getFullYear().toString().slice(-2);
+            
+            return `${day} ${month} ${year}`;
+        }
     </script>
 </body>
 </html>

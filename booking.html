@@ -19,10 +19,9 @@
             <a href="#" class="nav-link">Home</a>
             <a href="#" class="nav-link">Destination</a>
             <a href="#" class="nav-link">Bookings</a>
-            <a href="#" class="nav-link">Contact</a>
         </nav>
         
-        <a href="#" class="nav-button">Log out</a>
+        <a href="landing.html" class="nav-button">Log out</a>
     </header>
 
     <!-- Hero Image -->
@@ -31,29 +30,51 @@
     <!-- Search Bar -->
     <div class="search-bar">
         <div class="search-item">
-            <div class="search-text">From LONDON</div>
+            <div class="search-text">
+               <label for="passengers">From</label>
+                <select id="passengers" required>
+                    <option value="" selected disabled>From destination</option>
+                    <option value="1">CANADA</option>
+                    <option value="2">LONDON</option>
+                    <option value="3">FRANCE</option>
+                </select>
+            </div>    
         </div>
         
         <div class="search-item">
             <div class="switch-icon">
                 <!-- Switch icon would go here -->
             </div>
-            <div class="search-text">To CANADA</div>
+        </div>
+
+        <div class="search-item">
+            <div class="search-text">
+               <label for="passengers">To</label>
+                <select id="passengers" required>
+                    <option value="" selected disabled>To destination</option>
+                    <option value="1">CANADA</option>
+                    <option value="2">LONDON</option>
+                    <option value="3">FRANCE</option>
+                </select>
+            </div>    
         </div>
         
         <div class="search-item">
-            <div class="search-text">Departure 06-08-2025</div>
-        </div>
-        
-        <button class="search-button">Search</button>
+            <div class="date-icon">
+            <label class="search-text" for="departureDate">Departure Date</label>
+            <input type="date" id="departureDate" required>
+            </div>
+        </div>  
+
+        <button class="search-button">SEARCH FLIGHT</button>
     </div>
     
     <!-- Flight Cards -->
     <div class="flight-container">
-        <!-- Flight Card 1 -->
+        <!-- Flight Card 1 for London to Canada -->
         <div class="flight-card">
             <div class="airline-info">
-                <div class="airline-logo"></div>
+                <div class="arik-airline-logo"></div>
                 <div class="airline-text">
                     <div class="airline-name">Arik Air (W37330)</div>
                     <div class="luggage-info">
@@ -70,13 +91,13 @@
             </div>
             
             <div class="flight-time">
-                <div class="time">14:30</div>
+                <div class="time">10:30</div>
                 <div class="date">6 Aug 25</div>
-                <div class="airport">Lagos, Murtala Muhammed International Airport</div>
+                <div class="airport">Heathrow Airport</div>
             </div>
             
             <div class="flight-duration">
-                <div class="duration">1hrs:15min</div>
+                <div class="duration">8hrs:15min</div>
                 <div class="flight-path">
                     <div class="dot"></div>
                     <div class="line"></div>
@@ -86,24 +107,24 @@
             </div>
             
             <div class="flight-time">
-                <div class="time">15:45</div>
+                <div class="time">18:45</div>
                 <div class="date">6 Aug 25</div>
-                <div class="airport">Abuja, Nnamdi Azikiwe International Airport</div>
+                <div class="airport">Toronto Pearson International Airport(YYZ)</div>
             </div>
             
             <div class="flight-price">
                 <div class="price">
                     <span>₦</span>
-                    <span>176,649</span>
+                    <span>825,633</span>
                 </div>
                 <button class="book-button">Book</button>
             </div>
         </div>
         
-        <!-- Flight Card 2 -->
+        <!-- Flight Card 2 for London to France-->
         <div class="flight-card">
             <div class="airline-info">
-                <div class="airline-logo"></div>
+                <div class="airpeace-airline-logo"></div>
                 <div class="airline-text">
                     <div class="airline-name">Air Peace (W37330)</div>
                     <div class="luggage-info">
@@ -118,13 +139,13 @@
             </div>
             
             <div class="flight-time">
-                <div class="time">19:30</div>
+                <div class="time">13:00</div>
                 <div class="date">6 Aug 25</div>
-                <div class="airport">Lagos, Murtala Muhammed International Airport</div>
+                <div class="airport">Heathrow Airport</div>
             </div>
             
             <div class="flight-duration">
-                <div class="duration">1hrs:15min</div>
+                <div class="duration">2hrs:15min</div>
                 <div class="flight-path">
                     <div class="dot"></div>
                     <div class="line"></div>
@@ -134,15 +155,211 @@
             </div>
             
             <div class="flight-time">
-                <div class="time">15:45</div>
+                <div class="time">15:15</div>
                 <div class="date">6 Aug 25</div>
-                <div class="airport">Abuja, Nnamdi Azikiwe International Airport</div>
+                <div class="airport">Charles de Gaulle Airport</div>
             </div>
             
             <div class="flight-price">
                 <div class="price">
                     <span>₦</span>
-                    <span>176,649</span>
+                    <span>220,601</span>
+                </div>
+                <button class="book-button">Book</button>
+            </div>
+        </div>
+
+        <!-- Flight Card 3 for Canada to London -->
+        <div class="flight-card">
+            <div class="airline-info">
+                <div class="arik-airline-logo"></div>
+                <div class="airline-text">
+                    <div class="airline-name">Arik Air (W37330)</div>
+                    <div class="luggage-info">
+                        <div class="luggage-item">
+                            <!-- Hand luggage icon -->
+                            <span>7kg</span>
+                        </div>
+                        <div class="luggage-item">
+                            <!-- Checked luggage icon -->
+                            <span>20kg</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flight-time">
+                <div class="time">10:30</div>
+                <div class="date">6 Aug 25</div>
+                <div class="airport">Toronto Pearson International Airport(YYZ)</div>
+            </div>
+            
+            <div class="flight-duration">
+                <div class="duration">8hrs:15min</div>
+                <div class="flight-path">
+                    <div class="dot"></div>
+                    <div class="line"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="flight-type">Non Stop</div>
+            </div>
+            
+            <div class="flight-time">
+                <div class="time">18:45</div>
+                <div class="date">6 Aug 25</div>
+                <div class="airport">Heathrow Airport</div>
+            </div>
+            
+            <div class="flight-price">
+                <div class="price">
+                    <span>₦</span>
+                    <span>825,633</span>
+                </div>
+                <button class="book-button">Book</button>
+            </div>
+        </div>
+        
+        <!-- Flight Card 4 for Canada to France-->
+        <div class="flight-card">
+            <div class="airline-info">
+                <div class="airpeace-airline-logo"></div>
+                <div class="airline-text">
+                    <div class="airline-name">Air Peace (W37330)</div>
+                    <div class="luggage-info">
+                        <div class="luggage-item">
+                            <span>7kg</span>
+                        </div>
+                        <div class="luggage-item">
+                            <span>20kg</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flight-time">
+                <div class="time">9:00</div>
+                <div class="date">6 Aug 25</div>
+                <div class="airport">Toronto Pearson International Airport(YYZ)</div>
+            </div>
+            
+            <div class="flight-duration">
+                <div class="duration">7hrs:30min</div>
+                <div class="flight-path">
+                    <div class="dot"></div>
+                    <div class="line"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="flight-type">Non Stop</div>
+            </div>
+            
+            <div class="flight-time">
+                <div class="time">16:30</div>
+                <div class="date">6 Aug 25</div>
+                <div class="airport">Charles de Gaulle Airport</div>
+            </div>
+            
+            <div class="flight-price">
+                <div class="price">
+                    <span>₦</span>
+                    <span>800,637</span>
+                </div>
+                <button class="book-button">Book</button>
+            </div>
+        </div>
+
+        <!-- Flight Card 5 for France to Canada -->
+        <div class="flight-card">
+            <div class="airline-info">
+                <div class="arik-airline-logo"></div>
+                <div class="airline-text">
+                    <div class="airline-name">Arik Air (W37330)</div>
+                    <div class="luggage-info">
+                        <div class="luggage-item">
+                            <!-- Hand luggage icon -->
+                            <span>7kg</span>
+                        </div>
+                        <div class="luggage-item">
+                            <!-- Checked luggage icon -->
+                            <span>20kg</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flight-time">
+                <div class="time">14:00</div>
+                <div class="date">6 Aug 25</div>
+                <div class="airport">Charles de Gaulle Airport</div>
+            </div>
+            
+            <div class="flight-duration">
+                <div class="duration">7hrs:30min</div>
+                <div class="flight-path">
+                    <div class="dot"></div>
+                    <div class="line"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="flight-type">Non Stop</div>
+            </div>
+            
+            <div class="flight-time">
+                <div class="time">21:30</div>
+                <div class="date">6 Aug 25</div>
+                <div class="airport">Toronto Pearson International Airport(YYZ)</div>
+            </div>
+            
+            <div class="flight-price">
+                <div class="price">
+                    <span>₦</span>
+                    <span>800,637</span>
+                </div>
+                <button class="book-button">Book</button>
+            </div>
+        </div>
+        
+        <!-- Flight Card 6 for France to London-->
+        <div class="flight-card">
+            <div class="airline-info">
+                <div class="airpeace-airline-logo"></div>
+                <div class="airline-text">
+                    <div class="airline-name">Air Peace (W37330)</div>
+                    <div class="luggage-info">
+                        <div class="luggage-item">
+                            <span>7kg</span>
+                        </div>
+                        <div class="luggage-item">
+                            <span>20kg</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flight-time">
+                <div class="time">11:00</div>
+                <div class="date">6 Aug 25</div>
+                <div class="airport">Charles de Gaulle Airport</div>
+            </div>
+            
+            <div class="flight-duration">
+                <div class="duration">2hrs:15min</div>
+                <div class="flight-path">
+                    <div class="dot"></div>
+                    <div class="line"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="flight-type">Non Stop</div>
+            </div>
+            
+            <div class="flight-time">
+                <div class="time">13:15</div>
+                <div class="date">6 Aug 25</div>
+                <div class="airport">Heathrow Airport</div>
+            </div>
+            
+            <div class="flight-price">
+                <div class="price">
+                    <span>₦</span>
+                    <span>220,601</span>
                 </div>
                 <button class="book-button">Book</button>
             </div>
@@ -161,9 +378,9 @@
             </div>
             
             <div class="footer-links">
-                <a href="#" class="footer-link">Home</a>
+                <a href="landing.html" class="footer-link">Home</a>
                 <a href="#" class="footer-link">Destinations</a>
-                <a href="#" class="footer-link">Bookings</a>
+                <a href="booking.html" class="footer-link">Bookings</a>
             </div>
             
             <div class="footer-links">
@@ -173,10 +390,10 @@
             </div>
             
             <div class="footer-social">
-                <div class="social-icon"></div>
-                <div class="social-icon"></div>
-                <div class="social-icon"></div>
-                <div class="social-icon"></div>
+                <div class="x-social-icon"></div>
+                <div class="linkedIn-social-icon"></div>
+                <div class="fb-social-icon"></div>
+                <div class="ig-social-icon"></div>
             </div>
         </div>
         
@@ -185,5 +402,19 @@
             <div class="copyright-text">2025 Aerivia. All rights reserved.</div>
         </div>
     </footer>
+
+    <script>
+        // Set minimum date for date inputs to today
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('departureDate').min = today;
+            document.getElementById('returnDate').min = today;
+            
+            // Update return date minimum when departure date changes
+            document.getElementById('departureDate').addEventListener('change', function() {
+                document.getElementById('returnDate').min = this.value;
+            });
+        });
+    </script>
 </body>
 </html>

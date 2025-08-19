@@ -160,28 +160,24 @@ body {
 .create-account-btn {
     width: 636px;
     max-width: 600px;
-    height: 60px;
+    height: auto;
     border: none;
     border-radius: 15px;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 50px;
     color: #FFFFFF;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-bottom: 20px;
+    margin-bottom: auto;
     text-transform: none;
 }
 
 .login-btn {
     background: linear-gradient(135deg, #2C5F63 0%, #1E4B4F 100%);
     margin-bottom: 15px;
-    height: 100px;
-    width: 636px;
-     border-radius: 15px;
-    
 }
 
 .login-btn:hover {

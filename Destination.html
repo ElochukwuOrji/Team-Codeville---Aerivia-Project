@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/normalize.css" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <title>Destination</title>
+    <style>
+      /* Additional CSS for smooth horizontal sliding */
+      body {
+        overflow-x: hidden;
+      }
+      
+      .carousel-wrapper {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        margin-top: 115px;
+      }
+      
+      .carousel-container {
+        display: flex;
+        width: 300%; /* 3 slides × 100% */
+        transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      
+      .carousel-slide {
+        width: 33.333%; /* 100% / 3 slides */
+        min-height: 100vh;
+        flex-shrink: 0;
+      }
+      
+      /* Remove the default hide class behavior for slides */
+      #canada, #london, #paris {
+        display: block !important;
+      }
+    </style>
+  </head>
+  <body class="destination-page">
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <div class="logo"></div>
+            <div class="logo-text">Aerivia</div>
+        </div>
+        
+        <nav class="nav-links">
+            <a href="landing.html" class="nav-link">Home</a>
+            <a href="Destination.html" class="nav-link">Destination</a>
+            <a href="booking.html" class="nav-link">Bookings</a>
+        </nav>
+        
+        <a href="landing.html" class="nav-button">Log out</a>
+    </header>
+
+    <!-- Carousel Wrapper -->
+    <div class="carousel-wrapper">
+      <div class="carousel-container" id="carouselContainer">
+        
+        <!-- Slide section 1 for Canada -->
+        <div id="canada" class="carousel-slide">
+          <section class="hero">
+            <h1 class="slogan">
+              <div>Beyond the clouds,</div>
+              <div>above expectations</div>
+            </h1>
+          </section>
+          <section class="prebooking-section">
+            <div class="destination-wrapper">
+              <h3 class="Destination-header">Best Time To Visit</h3>
+              <div class="destination-body">
+                <div class="location-container">
+                  <img
+                    class="vector-images"
+                    src="/images/Vector (1).png"
+                    alt="Location icon"
+                  />
+                </div>
+                <div class="destination-text">
+                  <h4 class="country-name">Canada</h4>
+                  <p class="tagline">A vast and rugged land</p>
+                </div>
+              </div>
+            </div>
+            <div class="destination-date">
+              <div class="destination-button">
+                <h5> <a href="booking.html" class="btn-book">Book trip</a> </h5>
+              </div>
+              <div class="location-container2">
+                <img
+                  class="vector-images"
+                  src="/images/Vector.png"
+                  alt="calender icon"
+                />
+                <p class="destination-date">January, February and April</p>
+              </div>
+            </div>
+          </section>
+          <div class="grid-container">
+            <div class="item1">
+              <img src="/images/flag.png" alt="The canadian flag" />
+            </div>
+            <div class="item2">
+              <img src="/images/canada-1.png" alt="A hand holding a dry leaf" />
+            </div>
+            <div class="item3">
+              <img
+                src="/images/canada-2.png"
+                alt="A wooden cabin with tall trees behind it during winter"
+              />
+            </div>
+            <div class="item4">
+              <img
+                src="/images/canada-3.png"
+                alt="A person wearing a hat standing in front of a river"
+              />
+            </div>
+            <div class="item5">
+              <img
+                src="/images/canada-4.png"
+                alt="The city of toronto at night time, with 'toronto' in glowing lights "
+              />
+            </div>
+            <div class="item6">
+              <img
+                src="/images/canada-5.png"
+                alt="An aerial view of a city in canada during sunset"
+              />
+            </div>
+          </div>
+          <section class="list-container">
+            <div class="overview-container">
+              <h4 class="overview-heading">Overview</h4>
+              <p class="overview-paragraph">
+                Canada is vast, diverse country, the second largest in the world by
+                area, known for its multicultural society, abundant natural
+                resources, and strong economy.
+              </p>
+            </div>
+            <div class="grid-items">
+              <div>
+                <h3 class="list-heading">Top Attractions</h3>
+                <ul>
+                  <li>Niagra Falls</li>
+                  <li>Banff National Park</li>
+                  <li>Cities of Quebec City</li>
+                  <li>Montreal</li>
+                  <li>Vancouver</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="list-heading">Local Cuisines</h3>
+                <ul>
+                  <li>Poutine (Quebec)</li>
+                  <li>Butter tarts</li>
+                  <li>Nanaimo bars</li>
+                  <li>Bannock</li>
+                  <li>Lobster Rolls</li>
+                  <li>Game meat</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="list-heading">Cultural Tips</h3>
+                <ul>
+                  <li>Niagra Falls; Niagra Falls is a &nbsp; must-visit spot</li>
+                  <li>World's largest coastline</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="list-heading">Popular Shopping Spots</h3>
+                <ul>
+                  <li>West Edmonton Mall</li>
+                  <li>Yorkdale Shopping Centre</li>
+                  <li>CF Toronto Eaton Centre</li>
+                </ul>
+              </div>
+            </div>
+            <section class="facts-holder">
+              <h4 class="facts-heading">Did you Know ?</h4>
+              <p class="overview-paragraph">
+                In the 16th century, French and British settlers arrived. Land
+                disputes between farmers and fur traders led to four wars between
+                1689 and 1763. The final war, called the French and Indian war, left
+                the British in control of Canada, but French influence continued and
+                remains strong even today.
+              </p>
+            </section>
+          </section>
+        </div>
+
+        <!-- Slide section 2 for London -->
+        <div id="london" class="carousel-slide">
+          <section class="hero">
+            <h1 class="slogan">
+              <div>Beyond the clouds,</div>
+              <div>above expectations</div>
+            </h1>
+          </section>
+          <section class="prebooking-section">
+            <div class="destination-wrapper">
+              <h3 class="Destination-header">Best Time To Visit</h3>
+              <div class="destination-body">
+                <div class="location-container">
+                  <img
+                    class="vector-images"
+                    src="/images/Vector (1).png"
+                    alt="Location icon"
+                  />
+                </div>
+                <div class="destination-text">
+                  <h4 class="country-name">London (UK)</h4>
+                  <p class="tagline">
+                    A global hub for finance, culture and history
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="destination-date">
+              <div class="destination-button">
+                <h5> <a href="booking.html" class="btn-book">Book trip</a> </h5>
+              </div>
+              <div class="location-container2">
+                <img
+                  class="vector-images"
+                  src="/images/Vector.png"
+                  alt="Date icon"
+                />
+                <p class="destination-date">January, July and December</p>
+              </div>
+            </div>
+          </section>
+          <div class="grid-container">
+            <div class="item1">
+              <img src="/images/london.png" alt="The london bridge" />
+            </div>
+            <div class="item2">
+              <img src="/images/london-1.png" alt="A picture of Big ben" />
+            </div>
+            <div class="item3">
+              <img
+                src="/images/london-2.png"
+                alt="A red phone booth near some bushes"
+              />
+            </div>
+            <div class="item4">
+              <img
+                src="/images/london-3.png"
+                alt="A red phone booth near a pesdestian lane"
+              />
+            </div>
+            <div class="item5">
+              <img src="/images/london-4.png" alt="Buckingham Palace" />
+            </div>
+            <div class="item6">
+              <img
+                src="/images/london-5.png"
+                alt="Buckingham Palace with tourists walking towards it"
+              />
+            </div>
+          </div>
+          <section class="list-container">
+            <div class="overview-container">
+              <h4 class="overview-heading">Overview</h4>
+              <p class="overview-paragraph">
+                UK, is known for its iconic landmarks like the Towel of London,
+                Buckingham palace, and the House of Parliament.
+              </p>
+            </div>
+            <div class="grid-items">
+              <div>
+                <h3 class="list-heading">Top Attractions</h3>
+                <ul>
+                  <li>The Tower of London</li>
+                  <li>Buckingham palace</li>
+                  <li>Westminster Abbey</li>
+                  <li>Tower Bridge</li>
+                  <li>Big ben</li>
+                  <li>The london eye</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="list-heading">Local Cuisines</h3>
+                <ul>
+                  <li>Fish and Chips</li>
+                  <li>Sunday Roast</li>
+                  <li>Full English Breakfast</li>
+                  <li>Pie and mash</li>
+                  <li>Afternoon Tea</li>
+                  <li>Chicken tikka masala</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="list-heading">Cultural Tips</h3>
+                <ul>
+                  <li>The Tower of London houses six ravens</li>
+                  <li>40.66% of the population being christians</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="list-heading">Popular Shopping Spots</h3>
+                <ul>
+                  <li>Oxford Street</li>
+                  <li>Band Street</li>
+                  <li>Regent Street</li>
+                </ul>
+              </div>
+            </div>
+            <section class="facts-holder">
+              <h4 class="facts-heading">Did you Know ?</h4>
+              <p class="overview-paragraph">
+                London is the capital of the United Kingdom, a country in western
+                Europe. It is also the capital of England, which is part of the
+                United Kingdom. London lies on the Thames River, it is the largest
+                city in the country.
+              </p>
+            </section>
+          </section>
+        </div>
+
+        <!-- Slide section 3 for Paris -->
+        <div id="paris" class="carousel-slide">
+          <section class="hero">
+            <h1 class="slogan">
+              <div>Beyond the clouds,</div>
+              <div>above expectations</div>
+            </h1>
+          </section>
+          <section class="prebooking-section">
+            <div class="destination-wrapper">
+              <h3 class="Destination-header">Best Time To Visit</h3>
+              <div class="destination-body">
+                <div class="location-container">
+                  <img
+                    class="vector-images"
+                    src="/images/Vector (1).png"
+                    alt="Location icon"
+                  />
+                </div>
+                <div class="destination-text">
+                  <h4 class="country-name">France (Paris)</h4>
+                  <p class="tagline">The city of lights, love and timeless charm</p>
+                </div>
+              </div>
+            </div>
+            <div class="destination-date">
+              <div class="destination-button">
+                <h5> <a href="booking.html" class="btn-book">Book trip</a> </h5>
+              </div>
+              <div class="location-container2">
+                <img
+                  class="vector-images"
+                  src="/images/Vector.png"
+                  alt="Date icon"
+                />
+                <p class="destination-date">February, July and November</p>
+              </div>
+            </div>
+          </section>
+          <div class="grid-container">
+            <div class="item1">
+              <img
+                src="/images/Eiffel-Tower-Paris-resized.jpg"
+                alt="A picture of the eiffel-tower"
+              />
+            </div>
+            <div class="item2">
+              <img src="/images/paris-1.png" alt="The Louvre museum" />
+            </div>
+            <div class="item3">
+              <img src="/images/paris-2.png" alt="Champs-Elysees" />
+            </div>
+            <div class="item4">
+              <img
+                src="/images/paris-3.png"
+                alt="The interior of the Notre-Dome cathedral"
+              />
+            </div>
+            <div class="item5">
+              <img
+                src="/images/paris-4.png"
+                alt="A picture of Montmartre and Sacre arena"
+              />
+            </div>
+            <div class="item6">
+              <img src="/images/paris-5.png" alt="seine river" />
+            </div>
+          </div>
+          <div class="content-holder">
+            <section class="list-container">
+              <div class="overview-container">
+                <h4 class="overview-heading">Overview</h4>
+                <p class="overview-paragraph">
+                  Paris, is known for its rich history in fashion, arts and
+                  gastronomy
+                </p>
+              </div>
+              <div class="grid-items">
+                <div>
+                  <h3 class="list-heading">Top Attractions</h3>
+                  <ul>
+                    <li>Eiffel tower</li>
+                    <li>Louvre Museum</li>
+                    <li>Notre-Dome cathedral</li>
+                    <li>Seline River cruise</li>
+                    <li>Montmartre & Sacre cruise</li>
+                    <li>Champs-Elysees</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="list-heading">Local Cuisines</h3>
+                  <ul>
+                    <li>Croissants & Baguettes</li>
+                    <li>Escargot</li>
+                    <li>Coq au Vin</li>
+                    <li>Creme Brulee</li>
+                    <li>Crepes</li>
+                    <li>Macarons</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="list-heading">Cultural Tips</h3>
+                  <ul>
+                    <li>Greet with light kiss on each cheek</li>
+                    <li>Lean basic french greetings</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="list-heading">Popular Shopping Spots</h3>
+                  <ul>
+                    <li>Champs Elysees</li>
+                    <li>Le marais</li>
+                    <li>Galeries Lafayette</li>
+                  </ul>
+                </div>
+              </div>
+              <section class="facts-holder">
+                <h4 class="facts-heading">Did you Know ?</h4>
+                <p class="overview-paragraph">
+                  Paris has over 30 bridges that cross across the seine river, and
+                  one of the one of the most romantic ones,
+                  <a class="link" href="https://en.wikipedia.org/wiki/Pont_des_Arts"
+                    >Pont des Arts</a
+                  >, used to be famous for lovers attaching padlocks to it before
+                  the city removed them in 2025 due to weight damage
+                </p>
+              </section>
+            </section>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <div class="footer-logo"></div>
+                <div class="footer-brand">
+                    <div class="brand-name">Aerivia</div>
+                    <div class="brand-tagline">Beyond the clouds, above expectation.</div>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <a href="landing.html" class="footer-link">Home</a>
+                <a href="Destination.html" class="footer-link">Destinations</a>
+                <a href="booking.html" class="footer-link">Bookings</a>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#" class="footer-link">FAQs</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+                <a href="#" class="footer-link">Privacy Policy</a>
+            </div>
+            
+            <div class="footer-social">
+                <div class="x-social-icon"></div>
+                <div class="linkedIn-social-icon"></div>
+                <div class="fb-social-icon"></div>
+                <div class="ig-social-icon"></div>
+            </div>
+        </div>
+        
+        <div class="footer-copyright">
+            <div class="copyright-symbol">©</div>
+            <div class="copyright-text">2025 Aerivia. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+      // Horizontal Destination Carousel JavaScript
+      class HorizontalDestinationCarousel {
+        constructor() {
+          this.carouselContainer = document.getElementById('carouselContainer');
+          this.slides = document.querySelectorAll('.carousel-slide');
+          this.currentSlide = 0;
+          this.slideInterval = 6000; // 6 seconds per slide
+          this.isAutoPlaying = true;
+          this.autoPlayTimer = null;
+          this.slideWidth = 100; // 100% width per slide
+          
+          this.init();
+        }
+
+        init() {
+          // Initialize carousel position
+          this.updateCarouselPosition();
+
+          // Start the carousel
+          this.startAutoPlay();
+
+          // Add pause on hover functionality
+          this.carouselContainer.addEventListener('mouseenter', () => {
+            this.pauseAutoPlay();
+          });
+          
+          this.carouselContainer.addEventListener('mouseleave', () => {
+            this.resumeAutoPlay();
+          });
+
+          // Add keyboard navigation
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+              this.previousSlide();
+              this.resetAutoPlay();
+            } else if (e.key === 'ArrowRight') {
+              this.nextSlide();
+              this.resetAutoPlay();
+            } else if (e.key === ' ') {
+              e.preventDefault();
+              this.toggleAutoPlay();
+            }
+          });
+
+          // Add touch/swipe support
+          this.initTouchEvents();
+        }
+
+        updateCarouselPosition() {
+          const translateX = -this.currentSlide * (this.slideWidth / this.slides.length);
+          this.carouselContainer.style.transform = `translateX(${translateX}%)`;
+        }
+
+        goToSlide(slideIndex) {
+          this.currentSlide = slideIndex;
+          this.updateCarouselPosition();
+        }
+
+        nextSlide() {
+          const nextIndex = (this.currentSlide + 1) % this.slides.length;
+          this.goToSlide(nextIndex);
+        }
+
+        previousSlide() {
+          const prevIndex = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+          this.goToSlide(prevIndex);
+        }
+
+        startAutoPlay() {
+          if (this.autoPlayTimer) {
+            clearInterval(this.autoPlayTimer);
+          }
+          
+          this.autoPlayTimer = setInterval(() => {
+            if (this.isAutoPlaying) {
+              this.nextSlide();
+            }
+          }, this.slideInterval);
+        }
+
+        pauseAutoPlay() {
+          this.isAutoPlaying = false;
+        }
+
+        resumeAutoPlay() {
+          this.isAutoPlaying = true;
+        }
+
+        resetAutoPlay() {
+          this.startAutoPlay();
+        }
+
+        toggleAutoPlay() {
+          if (this.isAutoPlaying) {
+            this.pauseAutoPlay();
+          } else {
+            this.resumeAutoPlay();
+          }
+        }
+
+        initTouchEvents() {
+          let touchStartX = 0;
+          let touchEndX = 0;
+
+          this.carouselContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+          }, { passive: true });
+
+          this.carouselContainer.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            this.handleSwipe(touchStartX, touchEndX);
+          }, { passive: true });
+        }
+
+        handleSwipe(startX, endX) {
+          const swipeThreshold = 50;
+          
+          if (endX < startX - swipeThreshold) {
+            // Swipe left - next slide
+            this.nextSlide();
+            this.resetAutoPlay();
+          }
+          
+          if (endX > startX + swipeThreshold) {
+            // Swipe right - previous slide
+            this.previousSlide();
+            this.resetAutoPlay();
+          }
+        }
+
+        // Method to manually go to a specific destination
+        goToDestination(destination) {
+          const slideIndex = {
+            'canada': 0,
+            'london': 1,
+            'paris': 2
+          }[destination.toLowerCase()];
+          
+          if (slideIndex !== undefined) {
+            this.goToSlide(slideIndex);
+            this.resetAutoPlay();
+          }
+        }
+
+        // Get current destination name
+        getCurrentDestination() {
+          const destinations = ['canada', 'london', 'paris'];
+          return destinations[this.currentSlide];
+        }
+      }
+
+      // Initialize the carousel when the DOM is loaded
+      let carousel;
+      document.addEventListener('DOMContentLoaded', () => {
+        carousel = new HorizontalDestinationCarousel();
+        
+        // Make carousel globally accessible for manual control
+        window.destinationCarousel = carousel;
+      });
+
+      // Optional: Add console controls for debugging
+      console.log('Horizontal Destination Carousel Loaded!');
+      console.log('Controls:');
+      console.log('- Arrow keys: Navigate manually');
+      console.log('- Spacebar: Pause/Resume auto-play');
+      console.log('- Swipe: Navigate on mobile');
+      console.log('- destinationCarousel.goToDestination("canada/london/paris"): Go to specific destination');
+      console.log('- destinationCarousel.getCurrentDestination(): Get current destination name');
+    </script>
+  </body>
+</html>

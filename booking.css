@@ -18,7 +18,7 @@ body {
 
 /* Header Styles */
 .header {
-    position: absolute;
+    position: fixed;
     height: 115px;
     width: 100%;
     top: 0;
@@ -28,6 +28,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
+    z-index: 1000;
 }
 
 .logo-container {
@@ -401,7 +402,7 @@ body {
 
 /* Footer */
 .footer {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: auto;
     min-height: 577.81px;
@@ -428,7 +429,7 @@ body {
 }
 
 .footer-brand {
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 .brand-name {

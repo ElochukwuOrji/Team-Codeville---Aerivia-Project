@@ -1,0 +1,1076 @@
+body {
+  font-family: poppins, sans-serif;
+}
+
+/* Navigation bar */
+.landing-header {
+  background-color: #87e6f1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.2rem 1rem;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+/* ====== LOGO ====== */
+.logo-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-img {
+  width: 100px;
+  height: 52px;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.logo-title {
+  font-family: Poppins, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #162d30;
+  text-align: center;
+}
+
+.landing-nav {
+  background-color: #f3edea;
+  border-radius: 9999px; /* pill shape */
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 12px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-link:hover {
+  background: rgba(37, 75, 79, 0.12);
+}
+
+.nav-btn {
+  border: 2px solid #254b4f;
+  border-radius: 18px;
+  background: #162d30;
+  color: #fff;
+  padding: 8px 18px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: #254b4f;
+}
+
+@media screen and (max-width: 768px) {
+  .landing-header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 16px;
+    height: auto;
+    position: static;
+  }
+
+  .logo-area {
+    justify-content: center;
+  }
+
+  /* Pill expands into vertical nav */
+  .landing-nav {
+    width: 100%;
+    max-width: 220px;
+    border-radius: 20px;
+    padding: 8px;
+    background-color: #87e6f1;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 3px solid #f3edea;
+  }
+
+  .nav-btn {
+    width: 100%;
+    max-width: 150px;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+}
+
+/* Add some top padding for page content so it doesn't hide behind the fixed header */
+main {
+  padding-top: 100px;
+}
+
+/* Hero */
+
+.hero {
+  background: url(../images/Frame\ 84.png) center center/cover no-repeat;
+  border-radius: 30px;
+  padding: 5rem 0.5rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  margin-top: 8rem; /* Because my nav is fixed, it was necessary to add this to create a white space between the nav and the hero section, I also had to do it for the mobile responsiveness*/
+}
+
+.hero-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 3.5rem; /* Adjust size as needed */
+  font-weight: 700; /* Bold */
+  letter-spacing: 0px; /* Optional */
+  margin-left: 80px;
+  margin-bottom: 8.5rem;
+  padding-top: 1rem;
+  height: 200px;
+  width: 404px;
+  color: #1a1a1a;
+}
+
+.hero-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem; /* Adjust size as needed */
+  font-weight: 500; /* Regular weight */
+  letter-spacing: 0px; /* Optional */
+  line-height: 1.5;
+  margin-left: 80px;
+  margin-top: 60px;
+  color: #1a1a1a;
+  margin-bottom: 0;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 32px;
+  border: 2px solid #254b4f; /* Add border */
+  border-radius: 18px; /* Optional: rounded corners */
+  padding: 10px; /* Space inside the border */
+  background: #162d30;
+  width: 90px;
+  height: 10px;
+  color: white;
+  align-items: center;
+  padding: 10px 24px; /* Space inside the border */
+  text-decoration: none;
+  margin-left: 90px;
+  margin-top: 80px;
+  transition: all 0.2s;
+}
+
+.hero-cta:hover {
+  background: #254b4f;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem;
+    margin: 1rem;
+    margin-top: 2.5rem;
+  }
+
+  .hero-content {
+    align-items: center; /* center everything */
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    margin-left: 0;
+    height: auto;
+    width: auto;
+    margin-bottom: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+    margin-left: 0;
+    margin-top: 20px;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+  }
+
+  .hero-cta {
+    margin-top: 30px;
+    padding: 12px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px auto 0 auto; /* center horizontally */
+    width: 33%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 26px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .hero-cta {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+/* choice */
+
+.choice-container {
+  border: 3px solid #fdfbfb;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 30px;
+  padding: 1rem 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fdfbfb;
+  align-items: center;
+  width: 100%;
+  bottom: 5rem; /*pulls it upward */
+  position: relative;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.choice-header {
+  text-align: center;
+  margin-top: 0;
+}
+
+.choice {
+  display: flex;
+  justify-content: space-between;
+}
+
+.drop-down {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  border: 0.1px solid #999;
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+}
+
+.drop-down-header {
+  font-weight: 600;
+}
+
+select {
+  border: none;
+  outline: none;
+  background-color: transparent; /* Optional */
+  padding: 10px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .choice {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .choice-container {
+    padding: 1rem;
+    margin: 0 auto;
+    border-radius: 20px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: static;
+  }
+  .going-box {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .drop-down {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    overflow-x: hidden; /* prevent icon+select combo from spilling */
+  }
+
+  .drop-down img {
+    max-width: 18px; /* shrink icons */
+    height: auto;
+    flex-shrink: 0; /* don’t let icons distort */
+  }
+
+  select {
+    width: 100%;
+    min-width: 0; /* crucial to avoid flex overflow */
+    flex: 1;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+
+  .choice-header {
+    font-size: 18px;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .drop-down-header {
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+  }
+}
+
+/* Travel Smart section */
+
+.travel-container {
+  background: #87e6f1;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  overflow: hidden;
+}
+
+.travel-text {
+  display: flex;
+  gap: 5rem;
+  justify-content: space-between;
+  padding: 1rem 6rem;
+}
+
+.explore-pill {
+  border: 1px solid #162d30;
+  border-radius: 30px;
+  background: #162d30;
+  color: #fdfbfb;
+  height: 100%;
+  padding: 0.5px 18px;
+  font-size: 1rem;
+  align-self: flex-end;
+  margin-bottom: 1rem;
+}
+
+.travel-subtitle {
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.travel-header {
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+
+.travel-image-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.travel-image-holder img {
+  width: 100%;
+  min-width: 400px;
+}
+
+.travel-image-card {
+  position: relative;
+}
+
+/* button pill */
+.book-pill {
+  position: absolute;
+  bottom: 10px; /* distance from bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fdfbfb;
+  color: #162d30;
+  padding: 8px 40px;
+  border-radius: 20px; /* pill shape */
+  font-size: 14px;
+  font-family: Poppins, sans-serif;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+/* new top-left pill */
+.top-pill {
+  position: absolute;
+  top: 15px; /* not too close to top */
+  left: 15px; /* not too close to left */
+  background: black;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-family: sans-serif;
+  margin: 1rem 0 0 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .travel-text {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .travel-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .travel-image-holder {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .travel-image-holder img {
+    width: 100%;
+    min-width: 300px;
+    max-width: 450px;
+  }
+
+  .explore-pill {
+    align-self: center;
+    padding: 6px 18px;
+    font-size: 13px;
+    margin-bottom: 2rem;
+  }
+
+  .travel-subtitle {
+    font-size: 16px;
+    margin-bottom: 0;
+    /* text-align: center; */
+  }
+
+  .book-pill {
+    font-size: 12px;
+    padding: 6px 18px;
+  }
+
+  .top-pill {
+    padding: 7px 16px;
+    font-size: 13px;
+  }
+}
+
+/*  Top Destination Section */
+.explore-all-pill {
+  border: 1px solid #162d30;
+  border-radius: 30px;
+  background: #fdfbfb;
+  color: #162d30;
+  padding: 8px 16px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  margin-top: 0;
+  font-weight: 600;
+}
+
+.top-destination-wrapper {
+  max-width: 1200px;
+  margin: 1rem auto;
+}
+
+.top-destination-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.top-destination-header {
+  margin-top: 4rem;
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+  margin-left: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .top-destination-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-destination-header {
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+.carousel-container {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 100%;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-price,
+.rating-number {
+  margin: 0;
+}
+
+.rating-holder {
+  border: 1px solid #888;
+  padding: 0 3px 2px 3px;
+  border-radius: 5px;
+  margin-top: 2rem;
+}
+
+.rating-country {
+  margin: 8px;
+}
+
+.carousel-item {
+  position: relative;
+  flex: 1;
+}
+
+.carousel-image {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.image-pill {
+  position: absolute;
+  bottom: 10px; /* keep it away from the very edge */
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 8rem;
+  width: 80%;
+  background: #fdfbfb;
+  color: #1a1a1a;
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+  .rating-holder {
+    margin-top: 0;
+  }
+
+  .top-destination-header {
+    margin-top: 3rem;
+  }
+}
+
+/* why aerivia? */
+.article-container {
+  display: flex;
+  gap: 17rem;
+  overflow: hidden;
+  margin: 2rem auto;
+  max-width: 1200px;
+  margin-top: 5rem;
+}
+
+.article-header {
+  font-weight: 600;
+  font-size: 3rem;
+  left: 1px;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.article-text {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  color: #1a1a1a;
+}
+
+.article-images-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 4px;
+}
+
+.displaced-image {
+  position: absolute;
+  right: 16rem;
+  top: 8rem;
+  width: 100%;
+  min-width: 250px;
+}
+
+.article-image {
+  width: 100%;
+  min-width: 250px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.article-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-list-items {
+  font-size: 2.5rem;
+  word-spacing: 4px;
+  color: #387177;
+  font-weight: 500;
+}
+
+.img-holder {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .article-container {
+    flex-direction: column;
+    gap: 4rem;
+    margin: 3rem auto;
+  }
+
+  .article-header,
+  .article-text {
+    text-align: center;
+  }
+
+  .article-header {
+    font-size: 2.5rem;
+  }
+
+  .article-text {
+    font-size: 1.1rem;
+  }
+
+  .article-list-items {
+    font-size: 2rem;
+  }
+
+  .displaced-image {
+    display: none;
+  }
+
+  .tick-image {
+    width: 30px;
+    height: 30px;
+  }
+
+  .img-holder {
+    gap: 1rem;
+  }
+}
+
+/* Our services */
+
+.our-services-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow: hidden;
+  max-width: 1120px;
+  margin: 1rem auto;
+  background: #87e6f1;
+  padding: 2.5rem;
+}
+
+.services-header {
+  font-size: 2.85rem;
+  margin-bottom: 1rem;
+}
+
+.services-text {
+  font-size: 1.3rem;
+  width: 480px;
+  word-break: break-all; /* Breaks words to fit the width */
+}
+
+.boxes {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.box {
+  border: 1px solid #f3edea;
+  height: 370px;
+  max-width: 370px;
+  width: 100%;
+  border-radius: 30px;
+  padding: 0.3rem 2rem;
+  overflow: hidden;
+  box-shadow: 0 8px 12px -4px rgba(0, 0, 0, 0.15);
+}
+
+.box-picture {
+  padding: 2rem 0 0 2rem;
+}
+
+.box-header {
+  font-size: 1.05rem;
+}
+
+.box-message {
+  font-size: 0.95rem;
+}
+
+.box-white {
+  background: #fdfbfb;
+  color: #1a1a1a;
+}
+
+.box-dark {
+  background: #162d30;
+  color: #e2f9fc;
+}
+
+.explore-pill-small {
+  border: 1px solid #162d30;
+  border-radius: 30px;
+  background: #162d30;
+  color: #fdfbfb;
+  height: 100%;
+  padding: 5px 8px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  width: 20vh;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .boxes {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .services-header {
+    font-size: 2.4rem;
+  }
+
+  .services-text {
+    font-size: 1.1rem;
+    width: 100%;
+  }
+
+  .service-texts-holder {
+    text-align: center;
+    padding: 1rem auto;
+  }
+
+  .explore-pill-small {
+    justify-self: center;
+  }
+
+  .box-picture {
+    width: 65px;
+    height: 70px;
+    object-fit: cover;
+  }
+}
+
+/* Age Targeted section */
+.age-container {
+  max-width: 1200px;
+  margin: 1rem auto;
+  overflow: hidden;
+}
+
+.age-box {
+  display: flex;
+  gap: 1.3rem;
+  border: 3px solid #fdfbfb;
+  padding: 1.5rem;
+  align-items: center;
+  border-radius: 50px;
+  box-shadow: 0 8px 12px -4px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.age-header {
+  font-size: 2.3rem;
+}
+
+.age-boxes {
+  display: flex;
+  gap: 5rem;
+}
+
+.age-number {
+  color: #387177;
+  font-size: 1.3rem;
+}
+
+.age-explore-pill {
+  border: 1px solid #162d30;
+  border-radius: 30px;
+  background: #162d30;
+  color: #fdfbfb;
+  padding: 5px 8px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  width: 20vh;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.age-small-container {
+  justify-self: center;
+}
+
+@media screen and (max-width: 768px) {
+  .age-header {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .age-boxes {
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem auto;
+  }
+
+  .age-box {
+    width: 100%;
+    flex-direction: column;
+    max-width: 200x;
+  }
+
+  .age-container {
+    margin: 1rem auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .age-header {
+    text-align: center;
+  }
+}
+
+/* FAQ Section */
+.faq-container {
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.faq-header {
+  font-size: 2.1rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.line-image {
+  opacity: 0.4;
+  width: 43%;
+}
+
+.faq-text {
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 768px) {
+  .line-image {
+    width: 70%;
+  }
+
+  .faq-header {
+    font-size: 1.5rem;
+  }
+
+  .faq-text {
+    font-size: 1.3rem;
+  }
+}
+
+/* footer */
+.aerivia-footer {
+  background: #87e6f1;
+  padding: 2rem 3rem;
+  padding-top: 0;
+  font-size: 1.1rem;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.footer-logo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.footer-icon {
+  width: 23px;
+  height: 23px;
+  object-fit: contain;
+}
+
+.footer-logo-container {
+  position: relative;
+}
+
+.footer-name {
+  position: absolute;
+  top: 90px;
+  left: 40px;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-top: 0.2rem;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-flex-link {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  list-style: none;
+}
+
+.footer-flex-link a {
+  text-decoration: none;
+  color: inherit; /* Inherits parent element's color */
+}
+
+.footer-slogan {
+  margin-top: 0;
+}
+
+.footer-icons-flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-pill {
+  border: 1px solid #162d30;
+  border-radius: 30px;
+  color: #162d30;
+  background: #fdfbfb;
+  padding: 5px 16px;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 2rem;
+  max-width: 30%;
+  margin: 2rem auto;
+  /* text-wrap: nowrap; */
+  overflow: hidden;
+  word-spacing: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-icons-flex {
+    justify-content: center;
+  }
+
+  .footer-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer-flex-link {
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .footer-icons-flex {
+    margin-bottom: 1.3rem;
+  }
+
+  .footer-slogan {
+    text-align: center;
+  }
+
+  .footer-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-name {
+    font-size: 1.7rem;
+    position: static;
+    margin-top: 0;
+  }
+
+  .footer-logo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .footer-pill {
+    width: 100%;
+    max-width: 60%;
+  }
+}

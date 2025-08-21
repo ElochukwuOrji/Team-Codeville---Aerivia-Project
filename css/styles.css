@@ -12,6 +12,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: poppins, sans-serif;
+  background-color: #cbc6c3;
 }
 
 /* Header Styles */
@@ -244,9 +245,10 @@ body {
 
 @media screen and (max-width: 768px) {
   .slogan {
-    font-size: 3.5rem;
+    font-size: 3.4rem;
     text-align: center;
     align-items: center;
+    justify-content: center;
     margin: 0 auto;
     padding-top: 0;
   }

@@ -1,65 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AERIVIA - Landing</title>
-    <link rel="stylesheet" href="landing.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="landing-container">
-        <!-- Header -->
-        <header class="landing-header">
-            <div class="logo-area">
-                <div class="logo-img"></div>
-                <span class="logo-title">AERIVIA</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="landing.css" />
+  </head>
+  <!-- dedicated to our beloved WD team lead's dad who we lost during the project -->
+  <body>
+    <header class="landing-header">
+      <div class="logo-area">
+        <div>
+          <img class="logo-img" src="images/Aerivia logo 1.png" alt="" />
+        </div>
+        <div class="logo-title">AERIVIA</div>
+      </div>
+      <nav class="landing-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#" class="nav-link">Home</a></li>
+          <li><a href="#" class="nav-link">Destinations</a></li>
+          <li><a href="#" class="nav-link">Bookings</a></li>
+        </ul>
+      </nav>
+      <a href="signin.html" class="nav-btn">Sign In</a>
+    </header>
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Beyond the clouds,<br />above expectation.</h1>
+        <p class="hero-subtitle">
+          Discover affordable trips, curated experiences,<br />
+          and smart travel tools whether you're flying for <br />
+          fun or business.
+        </p>
+        <a href="booking.html" class="hero-cta">Book a Trip </a>
+      </div>
+    </section>
+    <div class="choice-container">
+      <h3 class="choice-header">Where are you going?</h3>
+      <div class="choice">
+        <div class="going-box">
+          <p class="drop-down-header">Location</p>
+          <div class="drop-down">
+            <div>
+              <img src="images/Vector-location.png" alt="location icon" />
             </div>
-            <nav class="landing-nav">
-                <a href="#" class="nav-link">Home</a>
-                <a href="#" class="nav-link">Destinations</a>
-                <a href="#" class="nav-link">Bookings</a>
-                <a href="#" class="nav-link">Contact</a>
-            </nav>
-          <h5> <a href="signin.html" class="nav-btn">Sign In</a> </h5>
-        </header>
-
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">Beyond the clouds,<br>above expectation.</h1>
-                <p class="hero-subtitle">Discover affordable trips, curated experiences,<br> and smart travel tools whether you're flying for <br> fun or business.</p>
-               <a href="booking.html" class="hero-cta">Book a Trip </a>
+            <select class="destinations">
+              <option class="country">Lisbon, Portugal</option>
+              <option class="country">France (Paris)</option>
+              <option class="country">London (UK)</option>
+              <option class="country">Canada</option>
+            </select>
+          </div>
+        </div>
+        <div class="going-box">
+          <p class="drop-down-header">Date</p>
+          <div class="drop-down">
+            <div><img src="images/CalendarDots.png" alt="calender icon" /></div>
+            <select class="destinations">
+              <option class="date">20-08-2025</option>
+              <option class="date"></option>
+            </select>
+          </div>
+        </div>
+        <div class="going-box">
+          <p class="drop-down-header">Price</p>
+          <div class="drop-down">
+            <div>
+              <img src="images/Vector -dollar-sign.png" alt="dollar sign" />
             </div>
-            </section>
-
-        <!--Where Section-->
-        <section class="where-section">
-            <div class="where-content">
-                <h2 class="where-title"> Where are you going..??</h2>
-                <nav class="where-nav">
-                    <p class="where-link"> Location </p>
-                    <p class="where-link"> Date </p>
-                    <p class="where-link"> Price </p>
-                </nav>
-            </div>
-        </section>
-
-                    <!--Drop-down section-->
-                    <section class="Drop-down section"></section>
-                    <div class="Drop-down">
-                       <select class="destinations">
-               <option class="country"> Lisbon, Portugal </option>
-               <option class="country"> France (Paris) </option>
-               <option class="country"> London (UK) </option>
-               <option class="country"> Canada </option>
-               </select>
-                    </div>
-                    
-
-                
-            </div>
-        </section>
+            <select class="destinations">
+              <option class="country">Lisbon, Portugal ($600)</option>
+              <option class="country">France (Paris) ($1,000)</option>
+              <option class="country">London (UK) ($1,000)</option>
+              <option class="country">Canada ($1,100)</option>
+            </select>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+    <div class="travel-container">
+      <div class="travel-text">
+        <div>
+          <h2 class="travel-header">Travel Smart with Aerivial</h2>
+          <p class="travel-subtitle">
+            February is the busiest month-book early for top picks!
+          </p>
+          <p class="travel-subtitle">
+            March is calmer - perfect for peaceful escapes (and lower prices)
+          </p>
+        </div>
+        <div class="explore-pill">
+          <p>Explore Seasonal Deals</p>
+        </div>
+      </div>
+      <div class="travel-image-holder">
+        <div class="travel-image-card">
+          <img src="images/Rectangle 75.png" alt="A section of a city" />
+          <div class="top-pill">February Deals</div>
+          <div class="book-pill">Book Early</div>
+        </div>
+        <div class="travel-image-card">
+          <img
+            src="images/Rectangle 76.png"
+            alt="A yatch in a body of water in the night time"
+          />
+          <div class="top-pill">March Deals</div>
+          <div class="book-pill">Book Early</div>
+        </div>
+      </div>
+    </div>
+    <div class="top-destination-wrapper">
+      <h3 class="top-destination-header">Top Destinations</h3>
+      <div class="top-destination-container">
+        <p><strong>popular for both business and pleasure</strong></p>
+        <p>Sydney</p>
+        <p>Canada</p>
+        <p>UK</p>
+        <p class="explore-all-pill">Explore all Destinations</p>
+      </div>
+    </div>
+    <div>
+      <div class="carousel-container">
+        <div class="carousel-item">
+          <img
+            class="carousel-image"
+            src="images/England.png"
+            alt="A person with open arms standing in front of a body of water"
+          />
+          <div class="image-pill">Perfect for business</div>
+          <div class="rating-holder">
+            <p class="rating-country">London, UK</p>
+            <div class="rating">
+              <p class="rating-price">$560</p>
+              <p class="rating-number">5.0</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            class="carousel-image"
+            src="images/toronto.png"
+            alt="A part of the city of Toronto"
+          />
+          <div class="image-pill">Perfect for Leisure</div>
+          <div class="rating-holder">
+            <p class="rating-country">Toronto, Canada</p>
+            <div class="rating">
+              <p class="rating-price">$560</p>
+              <p class="rating-number">5.0</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            class="carousel-image"
+            src="images/baget.png"
+            alt="A bridge from Aerial view"
+          />
+          <div class="image-pill">Business and Leisure</div>
+          <div class="rating-holder">
+            <p class="rating-country">Paris, France</p>
+            <div class="rating">
+              <p class="rating-price">$350</p>
+              <p class="rating-number">5.0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="article-container">
+      <article class="aerivia-article">
+        <h3 class="article-header">Why Aerivia?</h3>
+        <p class="article-text">
+          At Aerivia, we believe travel should be seamless, smart, and tailored
+          to you. Born from data-backed insights and a passion for discovery,
+          Aerivia helps travelers find the right destinations at the right time
+          - whether for business or leisure.
+        </p>
+
+        <p class="article-text">
+          We blend personalized travel suggestions, seasonal insights and user
+          friendly tools to simplify your booking journey. With Aerivia, every
+          trip begins with confidence.
+        </p>
+        <div class="article-list">
+          <div class="img-holder">
+            <img class="tick-image" src="images/tick.png" alt="" />
+            <p class="article-list-items">Trusted by data</p>
+          </div>
+          <div class="img-holder">
+            <img class="tick-image" src="images/tick.png" alt="" />
+            <p class="article-list-items">Designed for ease</p>
+          </div>
+          <div class="img-holder">
+            <img class="tick-image" src="images/tick.png" alt="" />
+            <p class="article-list-items">Built for the modern traveller</p>
+          </div>
+        </div>
+      </article>
+      <div class="article-images-container">
+        <div>
+          <img
+            class="displaced-image"
+            src="images/aerivial terminal.png"
+            alt="Aerivia Booking stand"
+          />
+        </div>
+        <div>
+          <img
+            class="article-image"
+            src="images/aircraft personel.png"
+            alt="An Aircraft personnel wearing a reflector and a helmet"
+          />
+        </div>
+        <div>
+          <img
+            class="article-image"
+            src="images/aircraft passengers.png"
+            alt="Passengers boarding an aircraft"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="our-services-container">
+      <div class="service-texts-holder">
+        <h3 class="services-header">Our Services</h3>
+        <p class="services-text">
+          Discover the ways Aerivia makes your journey smoother from seamless
+          bookings to curated travel experiences designed just for you.
+        </p>
+        <div class="explore-pill-small">Explore</div>
+      </div>
+      <div class="boxes">
+        <div class="box box-white">
+          <img
+            class="box-picture"
+            src="images/Takeoff Ticket Streamline UX Colors.png"
+            alt="plane take off icon"
+          />
+          <div class="box-text-holder">
+            <h6 class="box-header">Hassle-Free Ticketing</h6>
+            <p class="box-message">
+              Effortless booking for more flights and travel start here.
+            </p>
+          </div>
+        </div>
+        <div class="box box-dark">
+          <img
+            class="box-picture"
+            src="images/Wheeled Luggage Streamline UX Colors.png"
+            alt="luggage icon"
+          />
+          <div class="box-text-holder">
+            <h6 class="box-header">Luxury Tour Packages</h6>
+            <p class="box-message">
+              Indulge in premium travel experiences crafted for comfort and
+              style.
+            </p>
+          </div>
+        </div>
+        <div class="box box-white">
+          <img
+            class="box-picture"
+            src="images/Call Support Streamline UX Colors.png"
+            alt="telephone icon"
+          />
+          <div class="box-text-holder">
+            <h6 class="box-header">Real Time Support</h6>
+            <p class="box-message">
+              Assistance available 14 hours a day, 7 days a week, for all
+              travellers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="age-container">
+      <h3 class="age-header">Age-Targeted Travels</h3>
+      <div class="age-boxes">
+        <div class="age-box">
+          <div>
+            <img
+              src="images/Tourist holding a camera.png"
+              alt="A young woman wearing a cap and blue jacket, holding a camera"
+            />
+          </div>
+          <div class="age-small-container">
+            <p class="age-number">For the 60s</p>
+            <p>Family Tours</p>
+            <div class="age-explore-pill">Explore</div>
+          </div>
+        </div>
+        <div class="age-box">
+          <div>
+            <img
+              src="images/Tourist taking a hike.png"
+              alt="A man wearing a cap, wearing a backpack, holding a stick hiking"
+            />
+          </div>
+          <div class="age-small-container">
+            <p class="age-number">For the 30s</p>
+            <p>Culture</p>
+            <div class="age-explore-pill">Explore</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="faq-container">
+      <h5 class="faq-header">FAQs</h5>
+      <div>
+        <img class="line-image" src="images/Line 8.png" alt="" />
+        <p class="faq-text">Q1: What is Aerivia and how does it work?</p>
+      </div>
+      <div>
+        <img class="line-image" src="images/Line 8.png" alt="" />
+        <p class="faq-text">
+          Q2: Can I book both local and international trips
+        </p>
+      </div>
+    </div>
+    <footer class="aerivia-footer">
+      <div class="footer-flex">
+        <div class="footer-flex1">
+          <div class="footer-logo-container">
+            <img class="footer-logo" src="images/Aerivia logo 1.png" alt="" />
+            <p class="footer-name">Aerivia</p>
+          </div>
+          <p class="footer-slogan">Beyond the clouds, above expectations</p>
+          <div class="footer-icons-flex">
+            <img
+              class="footer-icon"
+              src="images/twitter.png"
+              alt="twitter/X icon"
+            />
+            <img
+              class="footer-icon"
+              src="images/linkedIn.png"
+              alt="linkedin icon"
+            />
+            <img
+              class="footer-icon"
+              src="images/facebook.png"
+              alt="facebook icon"
+            />
+            <img
+              class="footer-icon"
+              src="images/Instagram.png"
+              alt="instagram icon"
+            />
+          </div>
+        </div>
+        <div class="footer-flex-link">
+          <li><a href="">Home</a></li>
+          <li><a href="">Destinations</a></li>
+          <li><a href="">Bookings</a></li>
+        </div>
+        <div class="footer-flex-link">
+          <li><a href="">FAQs</a></li>
+          <li><a href="">Terms of Service</a></li>
+          <li><a href="">Privacy policy</a></li>
+        </div>
+      </div>
+      <div class="footer-pill">&copy; 2025 Aerivia. All rights reserved.</div>
+    </footer>
+  </body>
 </html>

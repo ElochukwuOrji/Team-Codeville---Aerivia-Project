@@ -63,5 +63,5 @@ function validateCard() {
 
     function closeModal() {
       document.getElementById("confirmationModal").style.display = "none";
-
+      window.location.href = 'landing.html';
     }

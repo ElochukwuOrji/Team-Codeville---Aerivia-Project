@@ -160,11 +160,11 @@ main {
 
 
 
-*/
+
 /* hero */
 
 .hero {
-  background-image: url(./images/Plane-window-BG.png);
+  background-image: url(./images/plane_window_BG.png);
   height: 100vh;
 }
 

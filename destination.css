@@ -15,78 +15,152 @@ body {
   background-color: #cbc6c3;
 }
 
-/* Header Styles */
-.header {
-    position: fixed;
-    height: 115px;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: #87E6F1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
-    z-index: 1000;
+/* Navigation bar */
+.landing-header {
+  background-color: #87e6f1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.2rem 1rem;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  box-sizing: border-box;
+  z-index: 1000;
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+/* ====== LOGO ====== */
+.logo-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.logo {
-    width: 177px;
-    height: 251px;
-    background: url('images/Aerivia-logo.png') center/contain no-repeat;
-    position: absolute;
-    top: -80px;
-    left: 20px;
+.logo-img {
+  width: 100px;
+  height: 52px;
+  object-fit: cover;
+  box-sizing: border-box;
 }
 
-.logo-text {
-    font-family: 'Poppins', sans-serif; /* Change to another font if you want */
-    font-size: 20px;    /* Adjust size */
-    font-weight: 700;   /* Make it bold */
-    letter-spacing: 0px; /* Optional: spacing between letters */
-    position: absolute;
-    top: 50px;
-    left: 70px;
+.logo-title {
+  font-family: Poppins, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #162d30;
+  text-align: center;
 }
 
-.nav-links {
-    display: flex;
-    background: #F3EDEA;
-    border-radius: 80px;
-    padding: 1px 20px;
-    gap: 13px;
+.landing-nav {
+  background-color: #f3edea;
+  border-radius: 9999px; /* pill shape */
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
 }
 
 .nav-link {
-    padding: 10px;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 27px;
-    color: #000000;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 12px;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-.nav-button {
-    display: flex;
-    justify-content: center;
+.nav-link:hover {
+  background: rgba(37, 75, 79, 0.12);
+}
+
+.nav-btn {
+  border: 2px solid #254b4f;
+  border-radius: 18px;
+  background: #162d30;
+  color: #fff;
+  padding: 8px 18px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: #254b4f;
+}
+
+@media screen and (max-width: 768px) {
+  .landing-header {
+    flex-direction: column;
     align-items: center;
-    padding: 14px 20px;
-    background: #162D30;
-    border: 1px solid #404040;
-    border-radius: 100px;
-    color: #F3EDEA;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 27px;
-    text-decoration: none;
+    justify-content: center;
+    gap: 14px;
+    padding: 16px;
+    height: auto;
+    position: static;
+  }
+
+  .logo-area {
+    justify-content: center;
+  }
+
+  /* Pill expands into vertical nav */
+  .landing-nav {
+    width: 100%;
+    max-width: 220px;
+    border-radius: 20px;
+    padding: 8px;
+    background-color: #87e6f1;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 3px solid #f3edea;
+  }
+
+  .nav-btn {
+    width: 100%;
+    max-width: 150px;
+    text-align: center;
+    margin-bottom: 8px;
+  }
 }
 
+/* Add some top padding for page content so it doesn't hide behind the fixed header */
+main {
+  padding-top: 100px;
+}
+
+
+
+
+
+*/
 /* hero */
 
 .hero {
@@ -622,4 +696,141 @@ ul {
 
 .hide {
   display: none;
+}
+
+
+
+
+
+
+
+/* footer */
+.aerivia_footer {
+  background: #87e6f1;
+  padding: 2rem 3rem;
+  padding-top: 60px;
+  font-size: 1.1rem;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.footer-logo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.footer-icon {
+  width: 23px;
+  height: 23px;
+  object-fit: contain;
+}
+
+.footer-logo-container {
+  position: relative;
+}
+
+.footer-name {
+  position: absolute;
+  top: 90px;
+  left: 40px;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-top: 0.2rem;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-flex-link {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  list-style: none;
+}
+
+.footer-flex-link a {
+  text-decoration: none;
+  color: inherit; /* Inherits parent element's color */
+}
+
+.footer-slogan {
+  margin-top: 0;
+}
+
+.footer-icons-flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-pill {
+  border: 1px solid #162d30;
+  border-radius: 30px;
+  color: #162d30;
+  background: #fdfbfb;
+  padding: 5px 16px;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 2rem;
+  max-width: 30%;
+  margin: 2rem auto;
+  /* text-wrap: nowrap; */
+  overflow: hidden;
+  word-spacing: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-icons-flex {
+    justify-content: center;
+  }
+
+  .footer-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer-flex-link {
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .footer-icons-flex {
+    margin-bottom: 1.3rem;
+  }
+
+  .footer-slogan {
+    text-align: center;
+  }
+
+  .footer-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-name {
+    font-size: 1.7rem;
+    position: static;
+    margin-top: 0;
+  }
+
+  .footer-logo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .footer-pill {
+    width: 100%;
+    max-width: 60%;
+  }
 }

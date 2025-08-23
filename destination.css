@@ -164,7 +164,7 @@ main {
 /* hero */
 
 .hero {
-  background-image: url(../images/Plane\ window\ BG.png);
+  background-image: url(./images/Plane-window-BG.png);
   height: 100vh;
 }
 

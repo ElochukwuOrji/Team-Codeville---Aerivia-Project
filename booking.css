@@ -489,12 +489,12 @@ main {
 }
 
 .footer-logo {
-    width: 177px;
-    height: 251px;
+    width: 354px;
+    height: 502px;
     background: url('images/Aerivia-logo.png') center/contain no-repeat;
     position: absolute;
-    top: -80px;
-    left: 0px;
+    top: -130px;
+    left: 50px;
 }
 
 .footer-brand {
@@ -508,6 +508,7 @@ main {
     font-size: 52px;
     line-height: 78px;
     color: #1A1A1A;
+    top: 13px;
 }
 
 .brand-tagline {

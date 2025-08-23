@@ -9,6 +9,7 @@
     />
     <link rel="stylesheet" href="../../css/normalize.css" />
     <link rel="stylesheet" href="destination.css" />
+   
     <title>Destination</title>
     <style>
       /* Additional CSS for smooth horizontal sliding */
@@ -43,21 +44,26 @@
   </head>
   <body class="destination-page">
 
-    <!-- Header -->
-    <header class="header">
-        <div class="logo-container">
-            <div class="logo"></div>
-            <div class="logo-text">Aerivia</div>
+
+
+
+<header class="landing-header">
+      <div class="logo-area">
+        <div>
+          <img class="logo-img" src="images/Aerivia logo 1.png" alt="" />
         </div>
-        
-        <nav class="nav-links">
-            <a href="landing.html" class="nav-link">Home</a>
-            <a href="Destination.html" class="nav-link">Destination</a>
-            <a href="booking.html" class="nav-link">Bookings</a>
-        </nav>
-        
-        <a href="index.html" class="nav-button">Log out</a>
+        <div class="logo-title">AERIVIA</div>
+      </div>
+      <nav class="BOOKING-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="landing.html" class="nav-link">Home</a></li>
+          <li><a href="destination.html" class="nav-link">Destinations</a></li>
+          <li><a href="booking.html" class="nav-link">Bookings</a></li>
+        </ul>
+      </nav>
+      <a href="signin.html" class="nav-btn">Sign In</a>
     </header>
+
 
     <!-- Carousel Wrapper -->
     <div class="carousel-wrapper">
@@ -457,42 +463,56 @@
       </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div>
-                <div class="footer-logo"></div>
-                <div class="footer-brand">
-                    <div class="brand-name">Aerivia</div>
-                    <div class="brand-tagline">Beyond the clouds, above expectation.</div>
-                </div>
-            </div>
-            
-            <div class="footer-links">
-                <a href="landing.html" class="footer-link">Home</a>
-                <a href="Destination.html" class="footer-link">Destinations</a>
-                <a href="booking.html" class="footer-link">Bookings</a>
-            </div>
-            
-            <div class="footer-links">
-                <a href="#" class="footer-link">FAQs</a>
-                <a href="#" class="footer-link">Terms of Service</a>
-                <a href="#" class="footer-link">Privacy Policy</a>
-            </div>
-            
-            <div class="footer-social">
-                <div class="x-social-icon"></div>
-                <div class="linkedIn-social-icon"></div>
-                <div class="fb-social-icon"></div>
-                <div class="ig-social-icon"></div>
-            </div>
+
+     <footer class="aerivia_footer">
+      <div class="footer_flex">
+        <div class="footer-flex1">
+          <div class="footer-logo-container">
+            <img class="footer-logo" src="images/Aerivia logo 1.png" alt="" />
+            <p class="footer-name">Aerivia</p>
+          </div>
+          <p class="footer-slogan">Beyond the clouds, above expectations</p>
+          <div class="footer-icons-flex">
+            <img
+              class="footer-icon"
+              src="images/twitter.png"
+              alt="twitter/X icon"
+            />
+            <img
+              class="footer-icon"
+              src="images/linkedIn.png"
+              alt="linkedin icon"
+            />
+            <img
+              class="footer-icon"
+              src="images/facebook.png"
+              alt="facebook icon"
+            />
+            <img
+              class="footer-icon"
+              src="images/Instagram.png"
+              alt="instagram icon"
+            />
+          </div>
         </div>
-        
-        <div class="footer-copyright">
-            <div class="copyright-symbol">©</div>
-            <div class="copyright-text">2025 Aerivia. All rights reserved.</div>
+        <div class="footer-flex-link">
+          <li><a href="">Home</a></li>
+          <li><a href="">Destinations</a></li>
+          <li><a href="">Bookings</a></li>
         </div>
-    </footer>
+        <div class="footer-flex-link">
+          <li><a href="">FAQs</a></li>
+          <li><a href="">Terms of Service</a></li>
+          <li><a href="">Privacy policy</a></li>
+        </div>
+      </div>
+      <div class="footer-pill">&copy; 2025 Aerivia. All rights reserved.</div>
+    </footer>   
+
+
+
+
+
 
     <script>
       // Horizontal Destination Carousel JavaScript

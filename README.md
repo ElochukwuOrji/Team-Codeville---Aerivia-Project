@@ -4,7 +4,7 @@
 
 Aerivia is a modern flight booking website that offers seamless travel experiences with curated destinations and smart booking tools. Built for both business and leisure travelers.
 
-**Deployed Link:** 
+**Deployed Link:** https://surgeon006.github.io/Team-Codeville---Aerivia/
 
 ## Features
 
@@ -96,7 +96,7 @@ aerivia/
 
 ## Development Notes
 
-- Uses vanilla JavaScript for all functionality
+- Uses JavaScript for all functionality
 - CSS custom properties for consistent theming
 - Mobile-first responsive design approach
 - Semantic HTML structure for accessibility

@@ -145,7 +145,7 @@ main {
 /* Hero */
 
 .hero {
-  background: url(../images/Frame\ 84.png) center center/cover no-repeat;
+  background: url(./images/frame_84.png) center center/cover no-repeat;
   border-radius: 30px;
   padding: 5rem 0.5rem;
   max-width: 1200px;
